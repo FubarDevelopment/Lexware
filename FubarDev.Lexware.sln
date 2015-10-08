@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FubarDev.Lexware.Database", "FubarDev.Lexware.Database\FubarDev.Lexware.Database.csproj", "{6DEC95B8-A32B-4844-A2FD-495C394D14E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FubarDev.Lexware.Database.Buchhaltung", "FubarDev.Lexware.Database.Buchhaltung\FubarDev.Lexware.Database.Buchhaltung.csproj", "{D003539F-DA42-4DCD-97B3-EACD47567C4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FubarDev.Lexware.Database.Buchhaltung.Mappings", "FubarDev.Lexware.Database.Buchhaltung.Mappings\FubarDev.Lexware.Database.Buchhaltung.Mappings.csproj", "{FDAC3654-B1FB-4A81-83D0-68099BB5923A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FubarDev.Lexware.Database.Faktura", "FubarDev.Lexware.Database.Faktura\FubarDev.Lexware.Database.Faktura.csproj", "{DA535707-C0B2-4717-90D5-D04091511492}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FubarDev.Lexware.Database.Faktura.Mappings", "FubarDev.Lexware.Database.Faktura.Mappings\FubarDev.Lexware.Database.Faktura.Mappings.csproj", "{9593BB39-216E-4CD8-9F01-574D612135A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FubarDev.Lexware.Database.Global", "FubarDev.Lexware.Database.Global\FubarDev.Lexware.Database.Global.csproj", "{4E8E887A-A779-40AC-B077-18206B3FE35C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FubarDev.Lexware.Database.Global.Mappings", "FubarDev.Lexware.Database.Global.Mappings\FubarDev.Lexware.Database.Global.Mappings.csproj", "{3C6316DB-4900-435C-A1E4-7D4A0AAD67FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FubarDev.Lexware.Database.NhSupport", "FubarDev.Lexware.Database.NhSupport\FubarDev.Lexware.Database.NhSupport.csproj", "{CD010096-E6C6-4C18-A3DF-076A12C3E518}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FubarDev.Lexware.Database.Shared", "FubarDev.Lexware.Database.Shared\FubarDev.Lexware.Database.Shared.csproj", "{25E2C4E0-4FC4-4876-996C-6D284D072000}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DEC95B8-A32B-4844-A2FD-495C394D14E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DEC95B8-A32B-4844-A2FD-495C394D14E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DEC95B8-A32B-4844-A2FD-495C394D14E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DEC95B8-A32B-4844-A2FD-495C394D14E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D003539F-DA42-4DCD-97B3-EACD47567C4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D003539F-DA42-4DCD-97B3-EACD47567C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D003539F-DA42-4DCD-97B3-EACD47567C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D003539F-DA42-4DCD-97B3-EACD47567C4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDAC3654-B1FB-4A81-83D0-68099BB5923A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDAC3654-B1FB-4A81-83D0-68099BB5923A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDAC3654-B1FB-4A81-83D0-68099BB5923A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDAC3654-B1FB-4A81-83D0-68099BB5923A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA535707-C0B2-4717-90D5-D04091511492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA535707-C0B2-4717-90D5-D04091511492}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA535707-C0B2-4717-90D5-D04091511492}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA535707-C0B2-4717-90D5-D04091511492}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9593BB39-216E-4CD8-9F01-574D612135A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9593BB39-216E-4CD8-9F01-574D612135A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9593BB39-216E-4CD8-9F01-574D612135A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9593BB39-216E-4CD8-9F01-574D612135A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E8E887A-A779-40AC-B077-18206B3FE35C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E8E887A-A779-40AC-B077-18206B3FE35C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E8E887A-A779-40AC-B077-18206B3FE35C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E8E887A-A779-40AC-B077-18206B3FE35C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C6316DB-4900-435C-A1E4-7D4A0AAD67FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C6316DB-4900-435C-A1E4-7D4A0AAD67FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C6316DB-4900-435C-A1E4-7D4A0AAD67FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C6316DB-4900-435C-A1E4-7D4A0AAD67FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD010096-E6C6-4C18-A3DF-076A12C3E518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD010096-E6C6-4C18-A3DF-076A12C3E518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD010096-E6C6-4C18-A3DF-076A12C3E518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD010096-E6C6-4C18-A3DF-076A12C3E518}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25E2C4E0-4FC4-4876-996C-6D284D072000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25E2C4E0-4FC4-4876-996C-6D284D072000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25E2C4E0-4FC4-4876-996C-6D284D072000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25E2C4E0-4FC4-4876-996C-6D284D072000}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

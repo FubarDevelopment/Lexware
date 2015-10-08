@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="FubarDev.Lexware.Database.Faktura">
+  <class table="FK_AboVorlage" name="FubarDev.Lexware.Database.Faktura.AboVorlage">
+    <id name="SheetNr">
+      <generator class="FubarDev.Lexware.Database.NhSupport.LexwareIdTableGenerator, FubarDev.Lexware.Database.NhSupport">
+        <param name="target_table_name">FK_AboVorlage</param>
+        <param name="target_table_id_column_name">SheetNr</param>
+      </generator>
+    </id>
+    <natural-id>
+      <property name="AuftragsNr" not-null="true" />
+      <property name="Auftragskennung" column="AuftragsKennung" not-null="true" />
+    </natural-id>
+    <property name="KundenNr" not-null="true" />
+    <component name="Anschrift">
+      <property name="Firma" column="Anschrift_Firma" />
+      <property name="Anrede" column="Anschrift_Anrede" />
+      <property name="Plz" column="Anschrift_Plz" />
+      <property name="Ort" column="Anschrift_Ort" />
+    </component>
+    <properties name="LegacyId">
+      <property name="AuftragsNr" not-null="true" />
+      <property name="Auftragskennung" column="AuftragsKennung" not-null="true" />
+    </properties>
+    <property name="SummenNettoHaupt" column="Summen_netto_haupt" not-null="true" />
+    <property name="SummenBruttoHaupt" column="Summen_brutto_haupt" not-null="true" />
+    <property name="SummenNettoNeben" column="Summen_netto_neben" not-null="true" />
+    <property name="SummenBruttoNeben" column="Summen_brutto_neben" not-null="true" />
+    <property name="SummenUmsatzsteuerGesamt" column="Summen_ust_gesamt" not-null="true" />
+    <property name="SummenAbschlagNetto" column="Summen_abschlag_netto" not-null="true" />
+    <property name="SummenAbschlagBrutto" column="Summen_abschlag_brutto" not-null="true" />
+    <property name="SummenAbschlagUmsatzsteuer" column="Summen_abschlag_ust" not-null="true" />
+    <property name="SummenAbschlagForderung" column="Summen_abschlag_forderung" not-null="true" />
+    <property name="SummenAbschlagErhalten" column="Summen_abschlag_erhalten" not-null="true" />
+    <property name="SummenGesamt" column="Summen_gesamt" not-null="true" />
+    <property name="AboBeginn" column="tsAboBegin" type="FubarDev.Lexware.Database.NhSupport.LocalDateType, FubarDev.Lexware.Database.NhSupport" />
+    <property name="AboEnde" column="tsAboEnde" type="FubarDev.Lexware.Database.NhSupport.LocalDateType, FubarDev.Lexware.Database.NhSupport" />
+    <property name="AboAbgeschlossen" column="fAboAbgeschlossen" not-null="true" />
+    <many-to-one name="KonditionenPreisgruppe" column="Konditionen_PreisgrpNr" not-null="true" lazy="proxy" />
+    <property name="KonditionenRabatt" column="Konditionen_Rabatt" not-null="true" />
+    <property name="KonditionenRabattProzent" column="Konditionen_Rabatt_Proz" not-null="true" />
+    <property name="Created" column="System_created" />
+    <property name="CreatedBy" column="System_created_user" />
+    <property name="Updated" column="System_updated" />
+    <property name="UpdatedBy" column="System_updated_user" />
+    <bag name="Positionen" lazy="extra" generic="true" inverse="true">
+      <key property-ref="LegacyId">
+        <column name="AuftragsNr" not-null="true" />
+        <column name="AuftragsKennung" not-null="true" />
+      </key>
+      <one-to-many class="FubarDev.Lexware.Database.Faktura.AboVorlagePos" />
+    </bag>
+  </class>
+</hibernate-mapping>
