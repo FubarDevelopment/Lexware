@@ -1,4 +1,11 @@
-﻿using System;
+﻿//-----------------------------------------------------------------------
+// <copyright file="AboVorlage.cs" company="Fubar Development Junker">
+//     Copyright (c) Fubar Development Junker. All rights reserved.
+// </copyright>
+// <author>Mark Junker</author>
+//-----------------------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 
 using FubarDev.Lexware.Database.Shared;
@@ -143,25 +150,5 @@ namespace FubarDev.Lexware.Database.Faktura
         /// Positionen
         /// </summary>
         public virtual IList<AboVorlagePos> Positionen { get; set; }
-
-        //public virtual bool Equals(AboVorlage other)
-        //{
-        //    if (ReferenceEquals(other, null))
-        //        return false;
-        //    return string.Equals(AuftragsNr, other.AuftragsNr)
-        //           && Auftragskennung == other.Auftragskennung;
-        //}
-        //
-        //public override bool Equals(object obj)
-        //{
-        //    return Equals((AboVorlage)obj);
-        //}
-        //
-        //[SuppressMessage("ReSharper", "NonReadonlyMemberInGetHashCode")]
-        //public override int GetHashCode()
-        //{
-        //    return (AuftragsNr ?? string.Empty).GetHashCode()
-        //           ^ Auftragskennung.GetHashCode();
-        //}
     }
 }

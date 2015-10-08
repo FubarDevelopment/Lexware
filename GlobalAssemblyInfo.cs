@@ -1,6 +1,13 @@
-﻿using System.Reflection;
+﻿//-----------------------------------------------------------------------
+// <copyright file="GlobalAssemblyInfo.cs" company="Fubar Development Junker">
+//     Copyright (c) Fubar Development Junker. All rights reserved.
+// </copyright>
+// <author>Mark Junker</author>
+//-----------------------------------------------------------------------
 
-// Allgemeine Informationen über eine Assembly werden über die folgenden 
+using System.Reflection;
+
+// Allgemeine Informationen über eine Assembly werden über die folgenden
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die einer Assembly zugeordnet sind.
 #if !DEBUG
@@ -16,11 +23,11 @@
 // Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 //
 //      Hauptversion
-//      Nebenversion 
+//      Nebenversion
 //      Buildnummer
 //      Revision
 //
-// Sie können alle Werte angeben oder die standardmäßigen Build- und Revisionsnummern 
+// Sie können alle Werte angeben oder die standardmäßigen Build- und Revisionsnummern
 // übernehmen, indem Sie "*" eingeben:
 // [assembly: AssemblyVersion("1.0.*")]
 #if !CUSTOM_ASSEMBLY_VERSION

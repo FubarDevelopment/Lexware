@@ -1,4 +1,11 @@
-﻿using System;
+﻿//-----------------------------------------------------------------------
+// <copyright file="LocalDateType.cs" company="Fubar Development Junker">
+//     Copyright (c) Fubar Development Junker. All rights reserved.
+// </copyright>
+// <author>Mark Junker</author>
+//-----------------------------------------------------------------------
+
+using System;
 using System.Data;
 using System.Globalization;
 using System.Xml;
@@ -20,44 +27,42 @@ namespace FubarDev.Lexware.Database.NhSupport
         /// <summary>
         /// Initialisiert eine neue Instanz der <see cref="LocalDateType"/> Klasse.
         /// </summary>
-        public LocalDateType() : base(SqlTypeFactory.Date)
+        public LocalDateType()
+            : base(SqlTypeFactory.Date)
         {
         }
 
-        /// <summary>
-        /// When implemented by a class, gets the abbreviated name of the type.
-        /// </summary>
-        /// <value>
-        /// The NHibernate type name.
-        /// </value>
+        /// <inheritdoc/>
         public override string Name => "LocalDate";
 
-        /// <summary>
-        /// When implemented by a class, gets the <see cref="T:System.Type"/> returned 
-        /// 		by the <c>NullSafeGet()</c> methods.
-        /// </summary>
-        /// <value>
-        /// The <see cref="T:System.Type"/> from the .NET framework.
-        /// </value>
-        /// <remarks>
-        /// This is used to establish the class of an array of this Itype
-        /// </remarks>
+        /// <inheritdoc/>
         public override Type ReturnedClass => typeof(LocalDate);
 
+        /// <inheritdoc/>
+        public override Type PrimitiveClass => typeof(LocalDate);
+
+        /// <inheritdoc/>
+        public override object DefaultValue => default(LocalDate);
+
+        /// <inheritdoc/>
         public override void Set(IDbCommand cmd, object value, int index)
         {
             var parm = (IDataParameter)cmd.Parameters[index];
             if (value == null)
+            {
                 parm.Value = DBNull.Value;
+            }
             else
             {
                 var localDate = (LocalDate)value;
                 parm.DbType = DbType.Date;
-                parm.Value = DateTime.SpecifyKind(new DateTime(localDate.Year, localDate.Month, localDate.Day),
-                                                  DateTimeKind.Local);
+                parm.Value = DateTime.SpecifyKind(
+                    new DateTime(localDate.Year, localDate.Month, localDate.Day),
+                    DateTimeKind.Local);
             }
         }
 
+        /// <inheritdoc/>
         public override object Get(IDataReader rs, int index)
         {
             try
@@ -71,26 +76,26 @@ namespace FubarDev.Lexware.Database.NhSupport
             }
         }
 
+        /// <inheritdoc/>
         public override object Get(IDataReader rs, string name)
         {
             return Get(rs, rs.GetOrdinal(name));
         }
 
+        /// <inheritdoc/>
         public override object FromStringValue(string xml)
         {
             var dateTime = XmlConvert.ToDateTimeOffset(xml).LocalDateTime;
             return new LocalDate(dateTime.Year, dateTime.Month, dateTime.Day);
         }
 
+        /// <inheritdoc/>
         public override string ObjectToSQLString(object value, Dialect dialect)
         {
             return ((LocalDate)value).ToString("'yyyy-MM-dd'", CultureInfo.InvariantCulture);
         }
 
-        public override Type PrimitiveClass => typeof(LocalDate);
-
-        public override object DefaultValue => default(LocalDate);
-
+        /// <inheritdoc/>
         public override bool IsEqual(object x, object y)
         {
             if (x == y)
@@ -101,19 +106,21 @@ namespace FubarDev.Lexware.Database.NhSupport
             return ((LocalDate)x).Equals(y);
         }
 
+        /// <inheritdoc/>
         public override int GetHashCode(object x, EntityMode entityMode)
         {
             var date = (LocalDate)x;
             var hashCode = 1;
             unchecked
             {
-                hashCode = 31 * hashCode + date.Day;
-                hashCode = 31 * hashCode + date.Month;
-                hashCode = 31 * hashCode + date.Year;
+                hashCode = (31 * hashCode) + date.Day;
+                hashCode = (31 * hashCode) + date.Month;
+                hashCode = (31 * hashCode) + date.Year;
             }
             return hashCode;
         }
 
+        /// <inheritdoc/>
         public override string ToString(object val)
         {
             return ((LocalDate)val).ToString("d", null);

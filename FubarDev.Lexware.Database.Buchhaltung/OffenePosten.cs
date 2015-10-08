@@ -1,4 +1,11 @@
-﻿using NodaTime;
+﻿//-----------------------------------------------------------------------
+// <copyright file="OffenePosten.cs" company="Fubar Development Junker">
+//     Copyright (c) Fubar Development Junker. All rights reserved.
+// </copyright>
+// <author>Mark Junker</author>
+//-----------------------------------------------------------------------
+
+using NodaTime;
 
 namespace FubarDev.Lexware.Database.Buchhaltung
 {

@@ -1,4 +1,11 @@
-﻿using System;
+﻿//-----------------------------------------------------------------------
+// <copyright file="AboVorlagePos.cs" company="Fubar Development Junker">
+//     Copyright (c) Fubar Development Junker. All rights reserved.
+// </copyright>
+// <author>Mark Junker</author>
+//-----------------------------------------------------------------------
+
+using System;
 
 using FubarDev.Lexware.Database.Shared;
 
@@ -172,29 +179,5 @@ namespace FubarDev.Lexware.Database.Faktura
         /// System_updated_user
         /// </summary>
         public virtual string UpdatedBy { get; set; }
-
-        //public virtual bool Equals(AboVorlagePos other)
-        //{
-        //    if (ReferenceEquals(other, null))
-        //        return false;
-        //    return Nr == other.Nr
-        //           && string.Equals(AuftragsNr, other.AuftragsNr, StringComparison.OrdinalIgnoreCase)
-        //           && Auftragskennung == other.Auftragskennung;
-        //    //&& Vorlage.Equals(other.Vorlage);
-        //}
-        //
-        //public override bool Equals(object obj)
-        //{
-        //    return Equals((AboVorlagePos)obj);
-        //}
-        //
-        //[SuppressMessage("ReSharper", "NonReadonlyMemberInGetHashCode")]
-        //public override int GetHashCode()
-        //{
-        //    return Nr.GetHashCode()
-        //        ^ AuftragsNr.GetHashCode()
-        //        ^ Auftragskennung.GetHashCode();
-        //           // ^ Vorlage.GetHashCode();
-        //}
     }
 }

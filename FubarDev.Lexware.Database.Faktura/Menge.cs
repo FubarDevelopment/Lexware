@@ -1,5 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿//-----------------------------------------------------------------------
+// <copyright file="Menge.cs" company="Fubar Development Junker">
+//     Copyright (c) Fubar Development Junker. All rights reserved.
+// </copyright>
+// <author>Mark Junker</author>
+//-----------------------------------------------------------------------
+
+using System;
 using System.Diagnostics.CodeAnalysis;
 
 using FubarDev.Lexware.Database.Shared;
@@ -43,6 +49,7 @@ namespace FubarDev.Lexware.Database.Faktura
         /// </summary>
         public virtual string UpdatedBy { get; set; }
 
+        /// <inheritdoc/>
         public virtual bool Equals(Menge other)
         {
             if (ReferenceEquals(other, null))
@@ -51,12 +58,14 @@ namespace FubarDev.Lexware.Database.Faktura
                    && (ArtikelNr ?? string.Empty).Equals(other.ArtikelNr ?? string.Empty, StringComparison.OrdinalIgnoreCase);
         }
 
+        /// <inheritdoc/>
         public override bool Equals(object obj)
         {
             return Equals((Menge)obj);
         }
 
-        [SuppressMessage("ReSharper", "NonReadonlyMemberInGetHashCode")]
+        /// <inheritdoc/>
+        [SuppressMessage("ReSharper", "NonReadonlyMemberInGetHashCode", Justification = "Die Werte müssen durch den O/R-Mapper gefüllt werden können.")]
         public override int GetHashCode()
         {
             return Nummer.GetHashCode()

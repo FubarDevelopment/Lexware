@@ -1,38 +1,31 @@
-﻿using System;
+﻿//-----------------------------------------------------------------------
+// <copyright file="LexwareDecimalType.cs" company="Fubar Development Junker">
+//     Copyright (c) Fubar Development Junker. All rights reserved.
+// </copyright>
+// <author>Mark Junker</author>
+//-----------------------------------------------------------------------
+
+using System;
 using System.Data;
 
 using NHibernate.Type;
 
 namespace FubarDev.Lexware.Database.NhSupport
 {
+    /// <summary>
+    /// Dieser Datentyp wird verwendet um die in der Datenbank als <see cref="double"/> hinterlegten Daten
+    /// in den Entitäten als <see cref="decimal"/> ansprechen zu können.
+    /// </summary>
     public class LexwareDecimalType : DecimalType
     {
-        /// <summary>
-        /// When implemented by a class, gets the object in the 
-        ///             <see cref="T:System.Data.IDataReader"/> for the Property.
-        /// </summary>
-        /// <param name="rs">The <see cref="T:System.Data.IDataReader"/> that contains the value.</param><param name="index">The index of the field to get the value from.</param>
-        /// <returns>
-        /// An object with the value from the database.
-        /// </returns>
+        /// <inheritdoc/>
         public override object Get(IDataReader rs, int index)
         {
             var v = Convert.ToDouble(rs[index]);
             return ConvertToDecimal(v);
         }
 
-        /// <summary>
-        /// When implemented by a class, gets the object in the 
-        ///             <see cref="T:System.Data.IDataReader"/> for the Property.
-        /// </summary>
-        /// <param name="rs">The <see cref="T:System.Data.IDataReader"/> that contains the value.</param><param name="name">The name of the field to get the value from.</param>
-        /// <returns>
-        /// An object with the value from the database.
-        /// </returns>
-        /// <remarks>
-        /// Most implementors just call the <see cref="M:NHibernate.Type.NullableType.Get(System.Data.IDataReader,System.Int32)"/> 
-        ///             overload of this method.
-        /// </remarks>
+        /// <inheritdoc/>
         public override object Get(IDataReader rs, string name)
         {
             var v = Convert.ToDouble(rs[name]);

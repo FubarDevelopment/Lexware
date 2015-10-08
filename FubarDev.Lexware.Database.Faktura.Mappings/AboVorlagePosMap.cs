@@ -1,4 +1,11 @@
-﻿using FluentNHibernate.Mapping;
+﻿//-----------------------------------------------------------------------
+// <copyright file="AboVorlagePosMap.cs" company="Fubar Development Junker">
+//     Copyright (c) Fubar Development Junker. All rights reserved.
+// </copyright>
+// <author>Mark Junker</author>
+//-----------------------------------------------------------------------
+
+using FluentNHibernate.Mapping;
 
 using FubarDev.Lexware.Database.NhSupport;
 
@@ -16,11 +23,6 @@ namespace FubarDev.Lexware.Database.Faktura.Mappings
                     .AddParam(LexwareIdTableGenerator.TargetTableIdColumnNameParam, "LNR");
             });
 
-            //References(r => r.Vorlage)
-            //    .PropertyRef("LegacyId")
-            //    .Columns("AuftragsNr", "AuftragsKennung")
-            //    .LazyLoad(Laziness.Proxy);
-
             Map(m => m.AuftragsNr).Not.Nullable();
             Map(m => m.Auftragskennung, "AuftragsKennung").Not.Nullable();
 
@@ -28,7 +30,6 @@ namespace FubarDev.Lexware.Database.Faktura.Mappings
             Map(m => m.PosNr);
             Map(m => m.PosText);
             Map(m => m.ArtikelNr);
-            //References(m => m.ArtikelVonNr, "ArtikelNr").LazyLoad(Laziness.Proxy).PropertyRef(a => a.ArtikelNr);
             References(m => m.ArtikelVonId, "lArtikelID").LazyLoad(Laziness.Proxy);
             Map(m => m.ArtikelBezeichnung, "Artikel_Bezeichnung");
             Map(m => m.ArtikelKurzbezeichnung, "szArtikel_Kurzbezeichnung");

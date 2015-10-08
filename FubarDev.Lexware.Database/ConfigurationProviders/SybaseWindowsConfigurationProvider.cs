@@ -1,4 +1,11 @@
-﻿using System.Collections.Generic;
+﻿//-----------------------------------------------------------------------
+// <copyright file="SybaseWindowsConfigurationProvider.cs" company="Fubar Development Junker">
+//     Copyright (c) Fubar Development Junker. All rights reserved.
+// </copyright>
+// <author>Mark Junker</author>
+//-----------------------------------------------------------------------
+
+using System.Collections.Generic;
 using System.Data.Common;
 using System.IO;
 using System.Net;
@@ -67,8 +74,6 @@ namespace FubarDev.Lexware.Database.ConfigurationProviders
             {
                 cfg.AddAssembly(mappingAssembly);
             }
-            //var fluentConfig = Fluently.Configure(cfg)
-            //    .BuildConfiguration();
             return cfg;
         }
 

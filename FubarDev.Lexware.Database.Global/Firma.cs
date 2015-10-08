@@ -1,9 +1,22 @@
-﻿using System;
+﻿//-----------------------------------------------------------------------
+// <copyright file="Firma.cs" company="Fubar Development Junker">
+//     Copyright (c) Fubar Development Junker. All rights reserved.
+// </copyright>
+// <author>Mark Junker</author>
+//-----------------------------------------------------------------------
+
+using System;
 
 using FubarDev.Lexware.Database.Shared;
 
 namespace FubarDev.Lexware.Database.Global
 {
+    /// <summary>
+    /// Diese Klasse repräsentiert eine Lexware-Firma.
+    /// </summary>
+    /// <remarks>
+    /// Pro Firma gibt es eine Datenbank.
+    /// </remarks>
     public class Firma : IAuditEntity
     {
         /// <summary>

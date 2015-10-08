@@ -1,4 +1,11 @@
-﻿using System;
+﻿//-----------------------------------------------------------------------
+// <copyright file="LexwareGlobalDbContext.cs" company="Fubar Development Junker">
+//     Copyright (c) Fubar Development Junker. All rights reserved.
+// </copyright>
+// <author>Mark Junker</author>
+//-----------------------------------------------------------------------
+
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
@@ -93,7 +100,6 @@ namespace FubarDev.Lexware.Database
                 {
                     foreach (var mappingAssembly in ConfigurationProvider.MappingAssemblies)
                         m.FluentMappings.AddFromAssembly(mappingAssembly);
-                    //m.FluentMappings.Conventions.AddFromAssemblyOf<PropertyToColumnNameConvention>();
                 })
                 .BuildConfiguration();
             return fluentConfig;

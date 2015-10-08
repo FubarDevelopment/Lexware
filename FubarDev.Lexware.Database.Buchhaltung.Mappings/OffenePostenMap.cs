@@ -1,4 +1,11 @@
-﻿using FluentNHibernate.Conventions.Helpers;
+﻿//-----------------------------------------------------------------------
+// <copyright file="OffenePostenMap.cs" company="Fubar Development Junker">
+//     Copyright (c) Fubar Development Junker. All rights reserved.
+// </copyright>
+// <author>Mark Junker</author>
+//-----------------------------------------------------------------------
+
+using FluentNHibernate.Conventions.Helpers;
 using FluentNHibernate.Mapping;
 
 using FubarDev.Lexware.Database.NhSupport;

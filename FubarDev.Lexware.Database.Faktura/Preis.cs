@@ -1,4 +1,11 @@
-﻿using FubarDev.Lexware.Database.Shared;
+﻿//-----------------------------------------------------------------------
+// <copyright file="Preis.cs" company="Fubar Development Junker">
+//     Copyright (c) Fubar Development Junker. All rights reserved.
+// </copyright>
+// <author>Mark Junker</author>
+//-----------------------------------------------------------------------
+
+using FubarDev.Lexware.Database.Shared;
 
 namespace FubarDev.Lexware.Database.Faktura
 {

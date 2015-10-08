@@ -1,4 +1,11 @@
-﻿using System;
+﻿//-----------------------------------------------------------------------
+// <copyright file="PropertyToColumnNameConvention.cs" company="Fubar Development Junker">
+//     Copyright (c) Fubar Development Junker. All rights reserved.
+// </copyright>
+// <author>Mark Junker</author>
+//-----------------------------------------------------------------------
+
+using System;
 using System.Linq;
 
 using FluentNHibernate.Conventions;
@@ -10,7 +17,7 @@ namespace FubarDev.Lexware.Database
 {
     public class PropertyToColumnNameConvention : IPropertyConvention
     {
-        public static readonly string DefaultName = "auto";
+        public const string DefaultName = "auto";
 
         public void Apply(IPropertyInstance instance)
         {

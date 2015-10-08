@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿//-----------------------------------------------------------------------
+// <copyright file="NullableTuplizer.cs" company="Fubar Development Junker">
+//     Copyright (c) Fubar Development Junker. All rights reserved.
+// </copyright>
+// <author>Mark Junker</author>
+//-----------------------------------------------------------------------
+
+using System.Collections;
 
 using FubarDev.Lexware.Database.Shared;
 
@@ -15,11 +22,13 @@ namespace FubarDev.Lexware.Database.NhSupport
         {
         }
 
+        /// <inheritdoc/>
         public override object[] GetPropertyValuesToInsert(
             object entity, IDictionary mergeMap, ISessionImplementor session)
         {
             object[] values = base.GetPropertyValuesToInsert(entity, mergeMap, session);
-            //dirty hack 1
+
+            // dirty hack 1
             for (int i = 0; i < values.Length; i++)
             {
                 if (values[i] == null && typeof(IZeroAsNullEntity).IsAssignableFrom(getters[i].ReturnType))
@@ -30,10 +39,12 @@ namespace FubarDev.Lexware.Database.NhSupport
             return values;
         }
 
+        /// <inheritdoc/>
         public override object[] GetPropertyValues(object entity)
         {
             object[] values = base.GetPropertyValues(entity);
-            //dirty hack 2
+
+            // dirty hack 2
             for (int i = 0; i < values.Length; i++)
             {
                 if (values[i] == null && typeof(IZeroAsNullEntity).IsAssignableFrom(getters[i].ReturnType))
@@ -44,10 +55,10 @@ namespace FubarDev.Lexware.Database.NhSupport
             return values;
         }
 
-
+        /// <inheritdoc/>
         public override void SetPropertyValues(object entity, object[] values)
         {
-            //dirty hack 3.
+            // dirty hack 3.
             for (int i = 0; i < values.Length; i++)
             {
                 if (typeof(IZeroAsNullEntity).IsAssignableFrom(getters[i].ReturnType)
