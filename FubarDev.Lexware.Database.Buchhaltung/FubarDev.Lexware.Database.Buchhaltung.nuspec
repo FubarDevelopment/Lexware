@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <authors>Fubar Development Junker</authors>
+    <owners>Fubar Development Junker</owners>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/FubarDevelopment/Lexware</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Lexware-Entitäten für Buchhaltungsdaten</description>
+    <releaseNotes>Erstes Release</releaseNotes>
+    <copyright>Copyright 2015 Fubar Development Junker</copyright>
+    <tags>Lexware DB Datenbank Database Access Zugriff Buchhaltung</tags>
+  </metadata>
+</package>

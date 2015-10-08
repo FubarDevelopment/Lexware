@@ -57,6 +57,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="FubarDev.Lexware.Database.Buchhaltung.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

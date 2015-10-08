@@ -52,6 +52,7 @@
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="FubarDev.Lexware.Database.Global.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
