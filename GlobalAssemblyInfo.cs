@@ -33,5 +33,5 @@ using System.Reflection;
 #if !CUSTOM_ASSEMBLY_VERSION
 [assembly: AssemblyVersion("0.1.*")]
 #endif
-[assembly: AssemblyFileVersion("0.1.1")]
-[assembly: AssemblyInformationalVersion("0.1.1")]
+[assembly: AssemblyFileVersion("0.1.2")]
+[assembly: AssemblyInformationalVersion("0.1.2")]
