@@ -29,7 +29,7 @@ namespace FubarDev.Lexware.Database
     /// <summary>
     /// Datenbank-Kontext über den auf die Daten in der Lexware-Datenbank zugegriffen wird
     /// </summary>
-    public sealed class LexwareGlobalDbContext
+    public sealed class LexwareGlobalDbContext : IDisposable
     {
         private readonly ConcurrentDictionary<SessionFactoryKey, ISessionFactory> _userSessionFactory = new ConcurrentDictionary<SessionFactoryKey, ISessionFactory>(new SessionFactoryKeyComparer());
 
@@ -88,6 +88,13 @@ namespace FubarDev.Lexware.Database
         public ISessionFactory GetCompanySessionFactory([NotNull] GlobalPoco.Firma company, [NotNull] NetworkCredential credential)
         {
             return GetSessionFactoryFor(credential, company);
+        }
+
+        /// <inheritdoc/>
+        public void Dispose()
+        {
+            _session.Dispose();
+            ReadOnlySessionFactory.Dispose();
         }
 
         private NetworkCredential GetSuperUserLogin()
