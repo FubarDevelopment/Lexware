@@ -11,6 +11,9 @@ using FubarDev.Lexware.Database.Shared;
 
 namespace FubarDev.Lexware.Database.Faktura
 {
+    /// <summary>
+    /// Kundenstammdaten (<code>FK_Kunde</code>)
+    /// </summary>
     public class Kunde : IAuditEntity
     {
         /// <summary>
@@ -27,6 +30,36 @@ namespace FubarDev.Lexware.Database.Faktura
         /// Anschrift_Anrede, Anschrift_Firma, Anschrift_Ort, Anschrift_Plz
         /// </summary>
         public virtual Adresse Anschrift { get; set; }
+
+        /// <summary>
+        /// szUserdefined1
+        /// </summary>
+        public virtual string UserDefined1 { get; set; }
+
+        /// <summary>
+        /// szUserdefined2
+        /// </summary>
+        public virtual string UserDefined2 { get; set; }
+
+        /// <summary>
+        /// szUserdefined3
+        /// </summary>
+        public virtual string UserDefined3 { get; set; }
+
+        /// <summary>
+        /// szUserdefined4
+        /// </summary>
+        public virtual string UserDefined4 { get; set; }
+
+        /// <summary>
+        /// szUserdefined5
+        /// </summary>
+        public virtual string UserDefined5 { get; set; }
+
+        /// <summary>
+        /// szUserdefined6
+        /// </summary>
+        public virtual string UserDefined6 { get; set; }
 
         /// <summary>
         /// System_created

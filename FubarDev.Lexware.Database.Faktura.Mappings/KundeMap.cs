@@ -9,8 +9,14 @@ using FluentNHibernate.Mapping;
 
 namespace FubarDev.Lexware.Database.Faktura.Mappings
 {
+    /// <summary>
+    /// Fluent NHibernate-Mapping für <see cref="Kunde"/>
+    /// </summary>
     public class KundeMap : ClassMap<Kunde>
     {
+        /// <summary>
+        /// Initialisiert eine neue Instanz der <see cref="KundeMap"/> Klasse.
+        /// </summary>
         public KundeMap()
         {
             Table("FK_Kunde");
@@ -32,6 +38,13 @@ namespace FubarDev.Lexware.Database.Faktura.Mappings
                 c.Map(p => p.Plz);
                 c.Map(p => p.Ort);
             });
+
+            Map(m => m.UserDefined1, "szUserdefined1").Length(50);
+            Map(m => m.UserDefined2, "szUserdefined2").Length(50);
+            Map(m => m.UserDefined3, "szUserdefined3").Length(50);
+            Map(m => m.UserDefined4, "szUserdefined4").Length(50);
+            Map(m => m.UserDefined5, "szUserdefined5").Length(50);
+            Map(m => m.UserDefined6, "szUserdefined6").Length(50);
 
             Map(m => m.Created, "System_created");
             Map(m => m.CreatedBy, "System_created_user");
