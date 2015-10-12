@@ -71,7 +71,6 @@
     <Compile Include="IConfigurationProvider.cs" />
     <Compile Include="LexwareGlobalDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PropertyToColumnNameConvention.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FubarDev.Lexware.Database.Global.Mappings\FubarDev.Lexware.Database.Global.Mappings.csproj">

@@ -26,6 +26,9 @@ using GlobalPoco = FubarDev.Lexware.Database.Global;
 
 namespace FubarDev.Lexware.Database
 {
+    /// <summary>
+    /// Datenbank-Kontext über den auf die Daten in der Lexware-Datenbank zugegriffen wird
+    /// </summary>
     public sealed class LexwareGlobalDbContext
     {
         private readonly ConcurrentDictionary<SessionFactoryKey, ISessionFactory> _userSessionFactory = new ConcurrentDictionary<SessionFactoryKey, ISessionFactory>(new SessionFactoryKeyComparer());
@@ -34,6 +37,10 @@ namespace FubarDev.Lexware.Database
 
         private NetworkCredential _superUserLogin;
 
+        /// <summary>
+        /// Initialisiert eine neue Instanz der <see cref="LexwareGlobalDbContext"/> Klasse.
+        /// </summary>
+        /// <param name="configurationProvider">Der für den Verbindungsaufbau zu verwendende <see cref="IConfigurationProvider"/></param>
         public LexwareGlobalDbContext(IConfigurationProvider configurationProvider)
         {
             ConfigurationProvider = configurationProvider;
@@ -42,18 +49,42 @@ namespace FubarDev.Lexware.Database
             _session = ReadOnlySessionFactory.OpenStatelessSession();
         }
 
+        /// <summary>
+        /// Holt den für den Verbindungsaufbau zu verwendenden <see cref="IConfigurationProvider"/>
+        /// </summary>
         public IConfigurationProvider ConfigurationProvider { get; }
 
+        /// <summary>
+        /// Die Anmelde-Informationen für einen nur lesenden Zugriff auf die Haupt-Datenbank
+        /// </summary>
         public NetworkCredential ReadOnlyLogin { get; }
 
+        /// <summary>
+        /// Die NHibernate-<see cref="ISessionFactory"/> für einen nur lesenden Zugriff auf die Haupt-Datenbank
+        /// </summary>
         public ISessionFactory ReadOnlySessionFactory { get; }
 
+        /// <summary>
+        /// Holt die Anmeldeinformationen des Superusers (<code>U0</code>)
+        /// </summary>
         public NetworkCredential SuperUserLogin => _superUserLogin ?? (_superUserLogin = GetSuperUserLogin());
 
+        /// <summary>
+        /// Holt eine Abfrage für die Firmen aus der globalen Datenbank
+        /// </summary>
         public IQueryable<GlobalPoco.Firma> Firmen => _session.Query<GlobalPoco.Firma>();
 
+        /// <summary>
+        /// Holt eine Abfrage für die angelegten Benutzer aus der globalen Datenbank
+        /// </summary>
         public IQueryable<GlobalPoco.User> Users => _session.Query<GlobalPoco.User>();
 
+        /// <summary>
+        /// Erstellt eine <see cref="ISessionFactory"/> für eine Firmendatenbank
+        /// </summary>
+        /// <param name="company">Die Firma für die eine <see cref="ISessionFactory"/> zur Firmendatenbank aufgebaut werden soll</param>
+        /// <param name="credential">Die für den Datenbankzugriff notwendigen Anmeldeinformationen</param>
+        /// <returns>Die neue <see cref="ISessionFactory"/> für den Zugriff auf die Datenbank der <paramref name="company" /></returns>
         public ISessionFactory GetCompanySessionFactory([NotNull] GlobalPoco.Firma company, [NotNull] NetworkCredential credential)
         {
             return GetSessionFactoryFor(credential, company);

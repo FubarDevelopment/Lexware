@@ -14,15 +14,27 @@ using NHibernate.Persister.Entity;
 
 namespace FubarDev.Lexware.Database
 {
+    /// <summary>
+    /// Eine <see cref="IPreUpdateEventListener"/>- and <see cref="IPreInsertEventListener"/>-Implementation
+    /// für Entitäten, die <see cref="IAuditEntity"/> implementieren.
+    /// </summary>
     public class AuditEntityEventListener : IPreUpdateEventListener, IPreInsertEventListener
     {
+        /// <summary>
+        /// Initialisiert eine neue Instanz der <see cref="AuditEntityEventListener"/> Klasse.
+        /// </summary>
+        /// <param name="userId">Die ID des Users, der in der <see cref="IAuditEntity"/>-Instanz eingetragen wird</param>
         public AuditEntityEventListener(string userId)
         {
             CurrentUser = userId;
         }
 
+        /// <summary>
+        /// Holt die ID des Users, der in der <see cref="IAuditEntity"/>-Instanz eingetragen wird
+        /// </summary>
         public string CurrentUser { get; }
 
+        /// <inheritdoc/>
         public bool OnPreUpdate(PreUpdateEvent @event)
         {
             var audit = @event.Entity as IAuditEntity;
@@ -40,6 +52,7 @@ namespace FubarDev.Lexware.Database
             return false;
         }
 
+        /// <inheritdoc/>
         public bool OnPreInsert(PreInsertEvent @event)
         {
             var audit = @event.Entity as IAuditEntity;

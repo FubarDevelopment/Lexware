@@ -5,7 +5,6 @@
 // <author>Mark Junker</author>
 //-----------------------------------------------------------------------
 
-using System;
 using System.Collections.Generic;
 using System.Data;
 
@@ -16,13 +15,29 @@ using NHibernate.Type;
 
 namespace FubarDev.Lexware.Database.NhSupport
 {
+    /// <summary>
+    /// ID-Generator der die LX_GETID_2()-SQL-Funktion verwendet
+    /// </summary>
     public class LexwareIdTableGenerator : TransactionHelper, IIdentifierGenerator, IConfigurable
     {
+        /// <summary>
+        /// Parameter-Name für die SQL-Funktion über die die neue ID ermittelt wird
+        /// </summary>
         public const string IdGenFunctionNameParam = "id_gen_function_name";
+
+        /// <summary>
+        /// Standard-Name für die SQL-Funktion über die die neue ID ermittelt wird
+        /// </summary>
         public const string DefaultIdGenFunctionName = "LX_GETID_2";
 
+        /// <summary>
+        /// Parameter-Name für die Tabelle für die die ID ermittelt werden soll
+        /// </summary>
         public const string TargetTableNameParam = "target_table_name";
 
+        /// <summary>
+        /// ID-Spaltenname für die Tabelle für die die ID ermittelt werden soll
+        /// </summary>
         public const string TargetTableIdColumnNameParam = "target_table_id_column_name";
 
         private string _idGenFunctionName;
@@ -31,6 +46,7 @@ namespace FubarDev.Lexware.Database.NhSupport
 
         private string _targetTableIdColumnName;
 
+        /// <inheritdoc/>
         public override object DoWorkInCurrentTransaction(ISessionImplementor session, IDbConnection conn, IDbTransaction transaction)
         {
             using (var cmd = CreateSelectCommand(conn, transaction))
@@ -41,11 +57,13 @@ namespace FubarDev.Lexware.Database.NhSupport
             }
         }
 
+        /// <inheritdoc/>
         public object Generate(ISessionImplementor session, object obj)
         {
             return DoWorkInNewTransaction(session);
         }
 
+        /// <inheritdoc/>
         public void Configure(IType type, IDictionary<string, string> parms, Dialect dialect)
         {
             if (!parms.TryGetValue(IdGenFunctionNameParam, out _idGenFunctionName))

@@ -15,8 +15,17 @@ using NHibernate.Tuple.Entity;
 
 namespace FubarDev.Lexware.Database.NhSupport
 {
+    /// <summary>
+    /// Ein <see cref="PocoEntityTuplizer"/> über den Fremdschlüssel-Verweise aufgelöst, bzw. ersetzt werden können,
+    /// die statt <code>NULL</code> den Wert <code>0</code> verwenden.
+    /// </summary>
     public class NullableTuplizer : PocoEntityTuplizer
     {
+        /// <summary>
+        /// Initialisiert eine neue Instanz der <see cref="NullableTuplizer"/> Klasse.
+        /// </summary>
+        /// <param name="entityMetamodel">Das zu verwendende <see cref="EntityMetamodel"/></param>
+        /// <param name="mappedEntity">Die <see cref="PersistentClass"/> für die der <see cref="NullableTuplizer"/> erzeugt werden soll.</param>
         public NullableTuplizer(EntityMetamodel entityMetamodel, PersistentClass mappedEntity)
             : base(entityMetamodel, mappedEntity)
         {
