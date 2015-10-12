@@ -11,8 +11,14 @@ using FubarDev.Lexware.Database.NhSupport;
 
 namespace FubarDev.Lexware.Database.Faktura.Mappings
 {
+    /// <summary>
+    /// NHibernate-Mapping für <see cref="AboVorlagePos"/>
+    /// </summary>
     public class AboVorlagePosMap : ClassMap<AboVorlagePos>
     {
+        /// <summary>
+        /// Initialisiert eine neue Instanz der <see cref="AboVorlagePosMap"/> Klasse.
+        /// </summary>
         public AboVorlagePosMap()
         {
             Table("FK_AboVorlagePos");

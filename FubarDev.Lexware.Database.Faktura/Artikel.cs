@@ -11,11 +11,29 @@ using FubarDev.Lexware.Database.Shared;
 
 namespace FubarDev.Lexware.Database.Faktura
 {
+    /// <summary>
+    /// Stammdaten für Artikel
+    /// </summary>
     public class Artikel : IAuditEntity
     {
+        /// <summary>
+        /// ID (<code>SheetNr</code>)
+        /// </summary>
         public virtual int SheetNr { get; set; }
+
+        /// <summary>
+        /// Artikel-Nummer (<code>ArtikelNr</code>)
+        /// </summary>
         public virtual string ArtikelNr { get; set; }
+
+        /// <summary>
+        /// Artikel-Bezeichnung (<code>Bezeichnung</code>)
+        /// </summary>
         public virtual string Bezeichnung { get; set; }
+
+        /// <summary>
+        /// Artikel-Beschreibung (<code>StringClob</code>)
+        /// </summary>
         public virtual string Beschreibung { get; set; }
 
         /// <summary>

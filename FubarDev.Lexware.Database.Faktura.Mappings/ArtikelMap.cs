@@ -9,8 +9,14 @@ using FluentNHibernate.Mapping;
 
 namespace FubarDev.Lexware.Database.Faktura.Mappings
 {
+    /// <summary>
+    /// NHibernate-Mapping für <see cref="Artikel"/>
+    /// </summary>
     public class ArtikelMap : ClassMap<Artikel>
     {
+        /// <summary>
+        /// Initialisiert eine neue Instanz der <see cref="ArtikelMap"/> Klasse.
+        /// </summary>
         public ArtikelMap()
         {
             Table("FK_Artikel");

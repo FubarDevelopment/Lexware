@@ -11,6 +11,9 @@ using FubarDev.Lexware.Database.Shared;
 
 namespace FubarDev.Lexware.Database.Faktura
 {
+    /// <summary>
+    /// Vorlage für eine Position eines Abo-Vorgangs
+    /// </summary>
     public class AboVorlagePos : IAuditEntity // IEquatable<AboVorlagePos>
     {
         /// <summary>

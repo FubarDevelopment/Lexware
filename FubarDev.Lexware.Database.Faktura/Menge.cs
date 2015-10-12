@@ -12,6 +12,9 @@ using FubarDev.Lexware.Database.Shared;
 
 namespace FubarDev.Lexware.Database.Faktura
 {
+    /// <summary>
+    /// Vorhandene Artike-Menge (<code>FK_Menge</code>)
+    /// </summary>
     public class Menge : IAuditEntity, IEquatable<Menge>
     {
         /// <summary>

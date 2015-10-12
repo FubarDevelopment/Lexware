@@ -11,6 +11,9 @@ using FubarDev.Lexware.Database.Shared;
 
 namespace FubarDev.Lexware.Database.Faktura
 {
+    /// <summary>
+    /// Benannte Preisgruppe (<code>FK_Preisgruppe</code>)
+    /// </summary>
     public class Preisgruppe : IAuditEntity
     {
         /// <summary>

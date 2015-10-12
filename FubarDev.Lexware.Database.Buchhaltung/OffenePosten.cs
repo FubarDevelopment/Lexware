@@ -9,6 +9,9 @@ using NodaTime;
 
 namespace FubarDev.Lexware.Database.Buchhaltung
 {
+    /// <summary>
+    /// Offene Posten (<code>BH_OFFENEPOSTEN</code>)
+    /// </summary>
     public class OffenePosten
     {
         /// <summary>

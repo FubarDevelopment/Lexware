@@ -9,8 +9,14 @@ using FluentNHibernate.Mapping;
 
 namespace FubarDev.Lexware.Database.Faktura.Mappings
 {
+    /// <summary>
+    /// NHibernate-Mapping für <see cref="Preismatrix"/>
+    /// </summary>
     public class PreismatrixMap : ClassMap<Preismatrix>
     {
+        /// <summary>
+        /// Initialisiert eine neue Instanz der <see cref="PreismatrixMap"/> Klasse.
+        /// </summary>
         public PreismatrixMap()
         {
             Table("FK_Preismatrix");

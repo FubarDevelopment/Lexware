@@ -12,8 +12,14 @@ using FubarDev.Lexware.Database.NhSupport;
 
 namespace FubarDev.Lexware.Database.Buchhaltung.Mappings
 {
+    /// <summary>
+    /// Mapping für <see cref="OffenePosten"/>
+    /// </summary>
     public class OffenePostenMap : ClassMap<OffenePosten>
     {
+        /// <summary>
+        /// Initialisiert eine neue Instanz der <see cref="OffenePostenMap"/> Klasse.
+        /// </summary>
         public OffenePostenMap()
         {
             Table("BH_OFFENEPOSTEN");

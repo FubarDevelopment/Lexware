@@ -12,6 +12,9 @@ using FubarDev.Lexware.Database.Shared;
 
 namespace FubarDev.Lexware.Database.Faktura
 {
+    /// <summary>
+    /// Preis-Matrix (<code>FK_Preismatrix</code>)
+    /// </summary>
     public class Preismatrix : IAuditEntity, IEquatable<Preismatrix>
     {
         /// <summary>

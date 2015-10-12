@@ -11,8 +11,14 @@ using FubarDev.Lexware.Database.NhSupport;
 
 namespace FubarDev.Lexware.Database.Faktura.Mappings
 {
+    /// <summary>
+    /// NHibernate-Mapping für <see cref="Preis"/>
+    /// </summary>
     public class PreisMap : ClassMap<Preis>
     {
+        /// <summary>
+        /// Initialisiert eine neue Instanz der <see cref="PreisMap"/> Klasse.
+        /// </summary>
         public PreisMap()
         {
             Table("FK_Preis");

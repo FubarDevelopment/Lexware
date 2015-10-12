@@ -9,8 +9,14 @@ using FluentNHibernate.Mapping;
 
 namespace FubarDev.Lexware.Database.Faktura.Mappings
 {
+    /// <summary>
+    /// NHibernate-Mapping für <see cref="Preisgruppe"/>
+    /// </summary>
     public class PreisgruppeMap : ClassMap<Preisgruppe>
     {
+        /// <summary>
+        /// Initialisiert eine neue Instanz der <see cref="PreisgruppeMap"/> Klasse.
+        /// </summary>
         public PreisgruppeMap()
         {
             Table("FK_Preisgruppe");

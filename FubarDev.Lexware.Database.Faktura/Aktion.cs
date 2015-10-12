@@ -9,6 +9,9 @@ using NodaTime;
 
 namespace FubarDev.Lexware.Database.Faktura
 {
+    /// <summary>
+    /// Zeitlich begrenzte Aktionen (Sonderpreise)
+    /// </summary>
     public class Aktion
     {
         /// <summary>

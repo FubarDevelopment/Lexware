@@ -9,6 +9,9 @@ using FubarDev.Lexware.Database.Shared;
 
 namespace FubarDev.Lexware.Database.Faktura
 {
+    /// <summary>
+    /// Artikel-Preis (<code>FK_Preis</code>)
+    /// </summary>
     public class Preis : IZeroAsNullEntity
     {
         /// <summary>

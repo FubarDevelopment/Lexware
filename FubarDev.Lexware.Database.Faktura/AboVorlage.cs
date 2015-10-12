@@ -14,6 +14,9 @@ using NodaTime;
 
 namespace FubarDev.Lexware.Database.Faktura
 {
+    /// <summary>
+    /// Vorlage für einen Abo-Vorgang
+    /// </summary>
     public class AboVorlage : IAuditEntity // IEquatable<AboVorlage>
     {
         /// <summary>
