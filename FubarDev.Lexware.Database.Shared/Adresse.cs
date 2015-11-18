@@ -31,5 +31,10 @@ namespace FubarDev.Lexware.Database.Shared
         /// Holt oder setzt den Ort
         /// </summary>
         public virtual string Ort { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt die E-Mail
+        /// </summary>
+        public virtual string Email { get; set; }
     }
 }

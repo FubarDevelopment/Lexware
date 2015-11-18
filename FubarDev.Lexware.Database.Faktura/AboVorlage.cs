@@ -40,7 +40,7 @@ namespace FubarDev.Lexware.Database.Faktura
         public virtual string KundenNr { get; set; }
 
         /// <summary>
-        /// Anschrift_Anrede, Anschrift_Firma, Anschrift_Ort, Anschrift_FirmaPlz
+        /// Anschrift_Anrede, Anschrift_Firma, Anschrift_Ort, Anschrift_FirmaPlz, Anschrift_Email
         /// </summary>
         public virtual Adresse Anschrift { get; set; }
 

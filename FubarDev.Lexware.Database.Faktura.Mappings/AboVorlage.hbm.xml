@@ -17,6 +17,7 @@
       <property name="Anrede" column="Anschrift_Anrede" />
       <property name="Plz" column="Anschrift_Plz" />
       <property name="Ort" column="Anschrift_Ort" />
+      <property name="Email" column="Anschrift_Email" />
     </component>
     <properties name="LegacyId">
       <property name="AuftragsNr" not-null="true" />
