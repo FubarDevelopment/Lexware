@@ -129,10 +129,6 @@ namespace FubarDev.Lexware.Database
             var listener = new AuditEntityEventListener(userName);
             cfg.SetListener(ListenerType.PreUpdate, listener);
             cfg.SetListener(ListenerType.PreInsert, listener);
-            foreach (var classMapping in cfg.ClassMappings)
-            {
-                classMapping.AddTuplizer(EntityMode.Poco, typeof(NullableTuplizer).AssemblyQualifiedName);
-            }
             var fluentConfig = Fluently.Configure(cfg)
                 .Mappings(m =>
                 {
@@ -140,6 +136,10 @@ namespace FubarDev.Lexware.Database
                         m.FluentMappings.AddFromAssembly(mappingAssembly);
                 })
                 .BuildConfiguration();
+            foreach (var classMapping in fluentConfig.ClassMappings)
+            {
+                classMapping.AddTuplizer(EntityMode.Poco, typeof(NullableTuplizer).AssemblyQualifiedName);
+            }
             return fluentConfig;
         }
 
