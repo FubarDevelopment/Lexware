@@ -60,7 +60,7 @@
     <Compile Include="..\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="GenericPersistentEnumType.cs" />
+    <Compile Include="GenericPersistentEnumType{T}.cs" />
     <Compile Include="LexwareDecimalType.cs" />
     <Compile Include="LexwareIdTableGenerator.cs" />
     <Compile Include="LocalDateType.cs" />

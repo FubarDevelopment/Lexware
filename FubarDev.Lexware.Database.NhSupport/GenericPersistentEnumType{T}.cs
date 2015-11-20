@@ -1,11 +1,6 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="GenericPersistentEnumType.cs" company="Fubar Development Junker">
-//     Copyright (c) Fubar Development Junker. All rights reserved.
+﻿// <copyright file="GenericPersistentEnumType{T}.cs" company="Fubar Development Junker">
+// Copyright (c) Fubar Development Junker. All rights reserved.
 // </copyright>
-// <author>Mark Junker</author>
-//-----------------------------------------------------------------------
-
-using System;
 
 using NHibernate.Type;
 
