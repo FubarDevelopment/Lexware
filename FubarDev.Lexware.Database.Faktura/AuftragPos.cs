@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="AboVorlagePos.cs" company="Fubar Development Junker">
+// <copyright file="AuftragPos.cs" company="Fubar Development Junker">
 //     Copyright (c) Fubar Development Junker. All rights reserved.
 // </copyright>
 // <author>Mark Junker</author>
@@ -12,9 +12,9 @@ using FubarDev.Lexware.Database.Shared;
 namespace FubarDev.Lexware.Database.Faktura
 {
     /// <summary>
-    /// Vorlage für eine Position eines Abo-Vorgangs
+    /// Vorlage für eine Position eines Auftrags
     /// </summary>
-    public class AboVorlagePos : IAuditEntity // IEquatable<AboVorlagePos>
+    public class AuftragPos : IAuditEntity // IEquatable<AboVorlagePos>
     {
         /// <summary>
         /// LNr

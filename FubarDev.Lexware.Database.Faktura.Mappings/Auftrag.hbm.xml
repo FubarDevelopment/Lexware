@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="FubarDev.Lexware.Database.Faktura">
-  <class table="FK_AboVorlage" name="FubarDev.Lexware.Database.Faktura.AboVorlage">
+  <class table="FK_Auftrag" name="FubarDev.Lexware.Database.Faktura.Auftrag">
     <id name="Id" column="SheetNr">
       <generator class="FubarDev.Lexware.Database.NhSupport.LexwareIdTableGenerator, FubarDev.Lexware.Database.NhSupport">
-        <param name="target_table_name">FK_AboVorlage</param>
+        <param name="target_table_name">FK_Auftrag</param>
         <param name="target_table_id_column_name">SheetNr</param>
       </generator>
     </id>
@@ -34,12 +34,14 @@
     <property name="SummenAbschlagForderung" column="Summen_abschlag_forderung" not-null="true" />
     <property name="SummenAbschlagErhalten" column="Summen_abschlag_erhalten" not-null="true" />
     <property name="SummenGesamt" column="Summen_gesamt" not-null="true" />
+    <many-to-one name="AboVorlage" column="lAboVorlageID" lazy="proxy" />
     <property name="AboBeginn" column="tsAboBegin" type="FubarDev.Lexware.Database.NhSupport.LocalDateType, FubarDev.Lexware.Database.NhSupport" />
     <property name="AboEnde" column="tsAboEnde" type="FubarDev.Lexware.Database.NhSupport.LocalDateType, FubarDev.Lexware.Database.NhSupport" />
     <property name="AboAbgeschlossen" column="fAboAbgeschlossen" not-null="true" />
     <many-to-one name="KonditionenPreisgruppe" column="Konditionen_PreisgrpNr" not-null="true" lazy="proxy" />
     <property name="KonditionenRabatt" column="Konditionen_Rabatt" not-null="true" />
     <property name="KonditionenRabattProzent" column="Konditionen_Rabatt_Proz" not-null="true" />
+    <property name="Liefertermin" column="tsLieferTermin" type="FubarDev.Lexware.Database.NhSupport.LocalDateType, FubarDev.Lexware.Database.NhSupport" />
     <property name="Created" column="System_created" />
     <property name="CreatedBy" column="System_created_user" />
     <property name="Updated" column="System_updated" />
@@ -49,7 +51,7 @@
         <column name="AuftragsNr" not-null="true" />
         <column name="AuftragsKennung" not-null="true" />
       </key>
-      <one-to-many class="FubarDev.Lexware.Database.Faktura.AboVorlagePos" />
+      <one-to-many class="FubarDev.Lexware.Database.Faktura.AuftragPos" />
     </bag>
   </class>
 </hibernate-mapping>

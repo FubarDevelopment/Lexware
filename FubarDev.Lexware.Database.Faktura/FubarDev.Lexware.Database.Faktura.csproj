@@ -50,9 +50,11 @@
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="AboVorlage.cs" />
+    <Compile Include="AuftragPos.cs" />
     <Compile Include="AboVorlagePos.cs" />
     <Compile Include="Aktion.cs" />
     <Compile Include="Artikel.cs" />
+    <Compile Include="Auftrag.cs" />
     <Compile Include="Kunde.cs" />
     <Compile Include="Menge.cs" />
     <Compile Include="Preis.cs" />

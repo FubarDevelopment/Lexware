@@ -1,9 +1,6 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="AboVorlage.cs" company="Fubar Development Junker">
-//     Copyright (c) Fubar Development Junker. All rights reserved.
+﻿// <copyright file="Auftrag.cs" company="Fubar Development Junker">
+// Copyright (c) Fubar Development Junker. All rights reserved.
 // </copyright>
-// <author>Mark Junker</author>
-//-----------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;
@@ -15,9 +12,9 @@ using NodaTime;
 namespace FubarDev.Lexware.Database.Faktura
 {
     /// <summary>
-    /// Vorlage für einen Abo-Vorgang
+    /// Rechnung, die ggf. aus einem Abo-Vorgang erstellt wurde
     /// </summary>
-    public class AboVorlage : IAuditEntity, IZeroAsNullEntity
+    public class Auftrag : IAuditEntity, IZeroAsNullEntity
     {
         /// <summary>
         /// SheetNr
@@ -100,6 +97,11 @@ namespace FubarDev.Lexware.Database.Faktura
         public virtual decimal SummenGesamt { get; set; }
 
         /// <summary>
+        /// lAboVorlageID
+        /// </summary>
+        public virtual AboVorlage AboVorlage { get; set; }
+
+        /// <summary>
         /// tsAboBegin
         /// </summary>
         public virtual LocalDate? AboBeginn { get; set; }
@@ -130,6 +132,11 @@ namespace FubarDev.Lexware.Database.Faktura
         public virtual decimal KonditionenRabattProzent { get; set; }
 
         /// <summary>
+        /// tsLieferTermin
+        /// </summary>
+        public virtual LocalDate? Liefertermin { get; set; }
+
+        /// <summary>
         /// System_created
         /// </summary>
         public virtual DateTime? Created { get; set; }
@@ -152,6 +159,6 @@ namespace FubarDev.Lexware.Database.Faktura
         /// <summary>
         /// Positionen
         /// </summary>
-        public virtual IList<AboVorlagePos> Positionen { get; set; }
+        public virtual IList<AuftragPos> Positionen { get; set; }
     }
 }
