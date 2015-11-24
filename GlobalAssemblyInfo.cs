@@ -31,7 +31,7 @@ using System.Reflection;
 // übernehmen, indem Sie "*" eingeben:
 // [assembly: AssemblyVersion("1.0.*")]
 #if !CUSTOM_ASSEMBLY_VERSION
-[assembly: AssemblyVersion("0.1.*")]
+[assembly: AssemblyVersion("0.2.*")]
 #endif
-[assembly: AssemblyFileVersion("0.1.4")]
-[assembly: AssemblyInformationalVersion("0.1.4")]
+[assembly: AssemblyFileVersion("0.2.0")]
+[assembly: AssemblyInformationalVersion("0.2.0")]
