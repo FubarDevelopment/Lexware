@@ -70,11 +70,9 @@ namespace FubarDev.Lexware.Database.NhSupport
             // dirty hack 3.
             for (int i = 0; i < values.Length; i++)
             {
-                if (typeof(IZeroAsNullEntity).IsAssignableFrom(getters[i].ReturnType)
-                    && ((IZeroAsNullEntity)values[i]).Id == 0)
-                {
+                var entityRef = values[i] as IZeroAsNullEntity;
+                if (entityRef?.Id == 0)
                     values[i] = null;
-                }
             }
             base.SetPropertyValues(entity, values);
         }
