@@ -34,6 +34,20 @@
     <property name="SummenAbschlagForderung" column="Summen_abschlag_forderung" not-null="true" />
     <property name="SummenAbschlagErhalten" column="Summen_abschlag_erhalten" not-null="true" />
     <property name="SummenGesamt" column="Summen_gesamt" not-null="true" />
+    <component name="Status">
+      <property name="Gebucht" column="bStatus_gebucht" />
+      <property name="Uebernommen" column="bStatus_uebernommen" />
+      <property name="Gedruckt" column="bStatus_gedruckt" />
+      <property name="Exportiert" column="bStatus_exportiert" />
+      <property name="Geliefert" column="bStatus_geliefert" />
+      <property name="Gemahnt" column="bStatus_gemahnt" />
+      <property name="Bezahlt" column="bStatus_bezahlt" />
+      <property name="Abschlag" column="bStatus_abschlag" />
+      <property name="Weitergefuehrt" column="bStatus_weitergefuehrt" />
+      <property name="ErfassungKomplett" column="bStatus_erfassung_komplett" />
+      <property name="Gemailt" column="bStatus_gemailt" />
+      <property name="Frankiert" column="bStatus_frankiert" />
+    </component>
     <many-to-one name="AboVorlage" column="lAboVorlageID" lazy="proxy" />
     <property name="AboBeginn" column="tsAboBegin" type="FubarDev.Lexware.Database.NhSupport.LocalDateType, FubarDev.Lexware.Database.NhSupport" />
     <property name="AboEnde" column="tsAboEnde" type="FubarDev.Lexware.Database.NhSupport.LocalDateType, FubarDev.Lexware.Database.NhSupport" />

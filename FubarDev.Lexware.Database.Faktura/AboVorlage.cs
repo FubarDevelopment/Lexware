@@ -100,6 +100,11 @@ namespace FubarDev.Lexware.Database.Faktura
         public virtual decimal SummenGesamt { get; set; }
 
         /// <summary>
+        /// Holt oder setzt die Status-Kennzeichen
+        /// </summary>
+        public virtual Status Status { get; set; }
+
+        /// <summary>
         /// tsAboBegin
         /// </summary>
         public virtual LocalDate? AboBeginn { get; set; }
