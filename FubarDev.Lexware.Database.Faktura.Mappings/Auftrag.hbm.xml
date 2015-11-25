@@ -47,6 +47,7 @@
       <property name="ErfassungKomplett" column="bStatus_erfassung_komplett" />
       <property name="Gemailt" column="bStatus_gemailt" />
       <property name="Frankiert" column="bStatus_frankiert" />
+      <property name="Storniert" column="bStatus_storniert" />
     </component>
     <many-to-one name="AboVorlage" column="lAboVorlageID" lazy="proxy" />
     <property name="AboBeginn" column="tsAboBegin" type="FubarDev.Lexware.Database.NhSupport.LocalDateType, FubarDev.Lexware.Database.NhSupport" />

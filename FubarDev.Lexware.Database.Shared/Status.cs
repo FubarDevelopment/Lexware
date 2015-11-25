@@ -64,5 +64,10 @@
         /// Holt oder setzt einen Wert, der angibt, ob der Auftrag frankiert wurde
         /// </summary>
         public virtual bool Frankiert { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt einen Wert, der angibt, ob der Auftrag storniert wurde
+        /// </summary>
+        public virtual bool Storniert { get; set; }
     }
 }
