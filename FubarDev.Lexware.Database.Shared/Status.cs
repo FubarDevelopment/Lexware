@@ -1,4 +1,8 @@
-﻿namespace FubarDev.Lexware.Database.Shared
+﻿// <copyright file="Status.cs" company="Fubar Development Junker">
+// Copyright (c) Fubar Development Junker. All rights reserved.
+// </copyright>
+
+namespace FubarDev.Lexware.Database.Shared
 {
     /// <summary>
     /// Status-Kennzeichen für Abo-Vorlagen und Aufträge

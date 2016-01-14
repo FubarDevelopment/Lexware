@@ -69,6 +69,7 @@
     <Compile Include="KundeMap.cs" />
     <Compile Include="ArtikelMap.cs" />
     <Compile Include="AboVorlagePosMap.cs" />
+    <Compile Include="TextMap.cs" />
     <Compile Include="PreisMap.cs" />
     <Compile Include="PreismatrixMap.cs" />
     <Compile Include="MengeMap.cs" />

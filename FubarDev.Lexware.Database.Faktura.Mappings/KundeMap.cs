@@ -47,6 +47,10 @@ namespace FubarDev.Lexware.Database.Faktura.Mappings
             Map(m => m.UserDefined5, "szUserdefined5").Length(50);
             Map(m => m.UserDefined6, "szUserdefined6").Length(50);
 
+            Map(m => m.BDSGStatus, "lBDSG_Status");
+            References(m => m.BDSGText, "lBDSGTextID").Nullable();
+            Map(m => m.BDSGZeitpunkt, "datBDSG");
+
             Map(m => m.Created, "System_created");
             Map(m => m.CreatedBy, "System_created_user");
             Map(m => m.Updated, "System_updated");

@@ -32,6 +32,21 @@ namespace FubarDev.Lexware.Database.Faktura
         public virtual Adresse Anschrift { get; set; }
 
         /// <summary>
+        /// Holt oder setzt einen Status für irgendetwas, was mit dem BDSG (Bundesdatenschutzgesetz) zu tun hat.
+        /// </summary>
+        public virtual int? BDSGStatus { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt einen Text für irgendetwas, was mit dem BDSG (Bundesdatenschutzgesetz) zu tun hat.
+        /// </summary>
+        public virtual Text BDSGText { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt einen Zeitstempel für irgendetwas, was mit dem BDSG (Bundesdatenschutzgesetz) zu tun hat.
+        /// </summary>
+        public virtual DateTime? BDSGZeitpunkt { get; set; }
+
+        /// <summary>
         /// szUserdefined1
         /// </summary>
         public virtual string UserDefined1 { get; set; }
