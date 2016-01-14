@@ -32,6 +32,11 @@ namespace FubarDev.Lexware.Database.Faktura
         public virtual Adresse Anschrift { get; set; }
 
         /// <summary>
+        /// Holt oder setzt einen Wert der angibt, ob der Kunde inaktiv ist.
+        /// </summary>
+        public virtual bool Inaktiv { get; set; }
+
+        /// <summary>
         /// Holt oder setzt einen Status für irgendetwas, was mit dem BDSG (Bundesdatenschutzgesetz) zu tun hat.
         /// </summary>
         public virtual int? BDSGStatus { get; set; }

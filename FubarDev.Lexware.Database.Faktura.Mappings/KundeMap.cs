@@ -40,6 +40,8 @@ namespace FubarDev.Lexware.Database.Faktura.Mappings
                 c.Map(p => p.Email);
             });
 
+            Map(m => m.Inaktiv, "bInaktiv");
+
             Map(m => m.UserDefined1, "szUserdefined1").Length(50);
             Map(m => m.UserDefined2, "szUserdefined2").Length(50);
             Map(m => m.UserDefined3, "szUserdefined3").Length(50);
