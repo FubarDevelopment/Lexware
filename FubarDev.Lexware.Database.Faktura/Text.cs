@@ -2,12 +2,14 @@
 // Copyright (c) Fubar Development Junker. All rights reserved.
 // </copyright>
 
+using FubarDev.Lexware.Database.Shared;
+
 namespace FubarDev.Lexware.Database.Faktura
 {
     /// <summary>
     /// Lange Texte auf die Verwiesen werden kann
     /// </summary>
-    public class Text
+    public class Text : IZeroAsNullEntity
     {
         /// <summary>
         /// Holt oder setzt die Identifikationsnummer
