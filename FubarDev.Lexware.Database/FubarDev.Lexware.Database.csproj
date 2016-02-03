@@ -72,7 +72,10 @@
     <Compile Include="ConfigurationProviders\SybaseWindowsConfigurationProvider.cs" />
     <Compile Include="IConfigurationProvider.cs" />
     <Compile Include="LexwareGlobalDbContext.cs" />
+    <Compile Include="LexwarePassword.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SliceExtensions.cs" />
+    <Compile Include="Slice.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FubarDev.Lexware.Database.Global.Mappings\FubarDev.Lexware.Database.Global.Mappings.csproj">
