@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FubarDev.Lexware.Database", "FubarDev.Lexware.Database\FubarDev.Lexware.Database.csproj", "{6DEC95B8-A32B-4844-A2FD-495C394D14E9}"
 EndProject
@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		pack.ps1 = pack.ps1
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FubarDev.Lexware.Database.Tests", "FubarDev.Lexware.Database.Tests\FubarDev.Lexware.Database.Tests.csproj", "{DE54D39E-C28B-4B01-B634-8C0E802B5B63}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -70,6 +72,10 @@ Global
 		{25E2C4E0-4FC4-4876-996C-6D284D072000}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25E2C4E0-4FC4-4876-996C-6D284D072000}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25E2C4E0-4FC4-4876-996C-6D284D072000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE54D39E-C28B-4B01-B634-8C0E802B5B63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE54D39E-C28B-4B01-B634-8C0E802B5B63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE54D39E-C28B-4B01-B634-8C0E802B5B63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE54D39E-C28B-4B01-B634-8C0E802B5B63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
