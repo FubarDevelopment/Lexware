@@ -49,6 +49,8 @@
       <property name="Frankiert" column="bStatus_frankiert" />
       <property name="Storniert" column="bStatus_storniert" />
     </component>
+    <many-to-one name="WeiterAus" column="Verweis_weiter_aus_nr" lazy="proxy" />
+    <many-to-one name="WeiterIn" column="Verweis_weiter_in_nr" lazy="proxy" />
     <many-to-one name="AboVorlage" column="lAboVorlageID" lazy="proxy" />
     <property name="AboBeginn" column="tsAboBegin" type="FubarDev.Lexware.Database.NhSupport.LocalDateType, FubarDev.Lexware.Database.NhSupport" />
     <property name="AboEnde" column="tsAboEnde" type="FubarDev.Lexware.Database.NhSupport.LocalDateType, FubarDev.Lexware.Database.NhSupport" />

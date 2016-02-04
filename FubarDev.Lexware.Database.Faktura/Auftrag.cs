@@ -102,6 +102,22 @@ namespace FubarDev.Lexware.Database.Faktura
         public virtual Status Status { get; set; }
 
         /// <summary>
+        /// Holt oder setzt den Auftrag, der von diesem Auftrag weitergeführt wird
+        /// </summary>
+        /// <remarks>
+        /// Der Auftrag, auf den verwiesen wird, wird durch diesen Auftrag ersetzt.
+        /// </remarks>
+        public virtual Auftrag WeiterAus { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt den Auftrag, der diesen Auftrag weiterführt
+        /// </summary>
+        /// <remarks>
+        /// Der Auftrag, auf den verwiesen wird, ersetzt diesen Auftrag.
+        /// </remarks>
+        public virtual Auftrag WeiterIn { get; set; }
+
+        /// <summary>
         /// lAboVorlageID
         /// </summary>
         public virtual AboVorlage AboVorlage { get; set; }
