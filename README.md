@@ -42,20 +42,20 @@ using (var context = new LexwareGlobalDbContext(provider))
 }
 ```
 
-Der ```SybaseWindowsConfigurationProvider``` liefert eine Standard-Konfiguration für den ```LexwareGlobalDbContext```, die von folgenden Bedingungen ausgeht:
+Der `SybaseWindowsConfigurationProvider` liefert eine Standard-Konfiguration für den `LexwareGlobalDbContext`, die von folgenden Bedingungen ausgeht:
 
-1. Die Datenbanken liegen unterhalb von ```c:\ProgramData\Lexware\professional\Datenbank```
-2. Der Standard-Datenbank-Name ist ```LXOFFICE```
-3. Die Standard-Datenbankdatei ist ```LXOffice.db```
-4. Die Firmen-Datenbankdatei hat den Namen ```LxCompany.db```
+1. Die Datenbanken liegen unterhalb von `c:\ProgramData\Lexware\professional\Datenbank`
+2. Der Standard-Datenbank-Name ist `LXOFFICE`
+3. Die Standard-Datenbankdatei ist `LXOffice.db`
+4. Die Firmen-Datenbankdatei hat den Namen `LxCompany.db`
 
-Der ```LexwareGlobalDbContext``` stellt folgendes zur Verfügung:
+Der `LexwareGlobalDbContext` stellt folgendes zur Verfügung:
 
-* Read-Only-Zugriff auf die ```LXOffice.db```
+* Read-Only-Zugriff auf die `LXOffice.db`
 * Abfrage des Superuser-Logins
 * Liste der Benutzer
 * Liste der Firmen
-* Eine ```ISessionFactory``` für den Zugriff auf die Firmendatenbank
+* Eine `ISessionFactory` für den Zugriff auf die Firmendatenbank
 
 ## Alle Artikel der Warenwirtschaft aller Firmen anzeigen
 
