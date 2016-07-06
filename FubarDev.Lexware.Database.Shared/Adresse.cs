@@ -18,9 +18,29 @@ namespace FubarDev.Lexware.Database.Shared
         public virtual string Anrede { get; set; }
 
         /// <summary>
+        /// Holt oder setzt die Vornamen
+        /// </summary>
+        public virtual string Vorname { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt den Nachnamen
+        /// </summary>
+        public virtual string Name { get; set; }
+
+        /// <summary>
         /// Holt oder setzt die Firma
         /// </summary>
         public virtual string Firma { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt die Straße
+        /// </summary>
+        public virtual string Strasse { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt die Hausnummer
+        /// </summary>
+        public virtual string HausNr { get; set; }
 
         /// <summary>
         /// Holt oder setzt die Postleitzahl
