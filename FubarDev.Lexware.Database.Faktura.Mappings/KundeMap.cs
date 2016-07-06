@@ -38,6 +38,10 @@ namespace FubarDev.Lexware.Database.Faktura.Mappings
                 c.Map(p => p.Plz);
                 c.Map(p => p.Ort);
                 c.Map(p => p.Email);
+                c.Map(p => p.Vorname);
+                c.Map(p => p.Name);
+                c.Map(p => p.Strasse);
+                c.Map(p => p.HausNr);
             });
 
             Map(m => m.Inaktiv, "bInaktiv");
