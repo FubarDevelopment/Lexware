@@ -56,5 +56,15 @@ namespace FubarDev.Lexware.Database.Shared
         /// Holt oder setzt die E-Mail
         /// </summary>
         public virtual string Email { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt den Ansprechpartner
+        /// </summary>
+        public virtual string Ansprech { get; set; }
+
+        /// <summary>
+        /// Holt oder setzt den Anschriftzusatz
+        /// </summary>
+        public virtual string Zusatz { get; set; }
     }
 }
