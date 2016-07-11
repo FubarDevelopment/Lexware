@@ -22,6 +22,8 @@
 	  <property name="Vorname" column="Anschrift_Vorname" />
 	  <property name="Strasse" column="Anschrift_Strasse" />
       <property name="HausNr" column="Anschrift_HausNr" />
+	  <property name="Ansprech" column="Anschrift_Ansprech" />
+	  <property name="Zusatz" column="Anschrift_Zusatz" />
     </component>
     <properties name="LegacyId">
       <property name="AuftragsNr" not-null="true" />
