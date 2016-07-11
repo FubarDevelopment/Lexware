@@ -42,7 +42,7 @@ namespace FubarDev.Lexware.Database.Faktura.Mappings
                 c.Map(p => p.Name);
                 c.Map(p => p.Strasse);
                 c.Map(p => p.HausNr);
-                c.Map(p => p.Ansprech);
+                c.Map(p => p.Ansprechpartner, "Ansprech");
                 c.Map(p => p.Zusatz);
             });
 

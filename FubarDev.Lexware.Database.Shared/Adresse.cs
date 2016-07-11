@@ -60,7 +60,7 @@ namespace FubarDev.Lexware.Database.Shared
         /// <summary>
         /// Holt oder setzt den Ansprechpartner
         /// </summary>
-        public virtual string Ansprech { get; set; }
+        public virtual string Ansprechpartner { get; set; }
 
         /// <summary>
         /// Holt oder setzt den Anschriftzusatz

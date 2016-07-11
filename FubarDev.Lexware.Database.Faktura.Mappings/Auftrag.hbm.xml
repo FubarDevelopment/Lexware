@@ -18,12 +18,12 @@
       <property name="Plz" column="Anschrift_Plz" />
       <property name="Ort" column="Anschrift_Ort" />
       <property name="Email" column="Anschrift_Email" />
-	  <property name="Name" column="Anschrift_Name" />
-	  <property name="Vorname" column="Anschrift_Vorname" />
-	  <property name="Strasse" column="Anschrift_Strasse" />
+	    <property name="Name" column="Anschrift_Name" />
+	    <property name="Vorname" column="Anschrift_Vorname" />
+	    <property name="Strasse" column="Anschrift_Strasse" />
       <property name="HausNr" column="Anschrift_HausNr" />
-	  <property name="Ansprech" column="Anschrift_Ansprech" />
-	  <property name="Zusatz" column="Anschrift_Zusatz" />
+	    <property name="Ansprechpartner" column="Anschrift_Ansprech" />
+	    <property name="Zusatz" column="Anschrift_Zusatz" />
     </component>
     <properties name="LegacyId">
       <property name="AuftragsNr" not-null="true" />
