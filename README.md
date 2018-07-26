@@ -1,4 +1,10 @@
-﻿# Lexware-Datenbank-Zugriff
+# WICHTIG!
+
+Lexware hat anscheinend die Art, wie das Passwort (oder sein Hash) gespeichert wird, geändert und deshalb funktioniert der hier hinterlegte Code nicht mehr.
+
+Wenn jemand die Analyse der Lexware-Änderungen finanzieren möchte, kann er mich über die [Web-Seite](https://www.fubar-dev.io/) kontaktieren.
+
+# Lexware-Datenbank-Zugriff
 
 [![Build status](https://build.fubar-dev.de/app/rest/builds/buildType:%28id:Lexware_ReleaseBuild%29/statusIcon)](https://build.fubar-dev.com/project.html?projectId=Lexware)
 
